@@ -155,12 +155,10 @@ cd DIO-Board-Java
 
 #### 5. Se estiver usando Liquibase para migrações, execute o comando para aplicar as migrações:
 ```
-./gradlew update
+gradlew build
 ```
-#### 6. Execute o projeto com o comando:
-```
-./gradlew bootRun
-```
+#### 6. Execute o projeto com a IDE
+
 Agora, sua aplicação estará rodando localmente e você pode começar a interagir com o board de tarefas.
 
 ## Conclusão
