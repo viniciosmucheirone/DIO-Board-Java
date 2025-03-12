@@ -10,9 +10,7 @@ Este projeto foi desenvolvido como parte do **programa Decola Tech** e tem como 
 
 A aplicação permite gerenciar tarefas em diferentes estágios, como **To Do**, **In Progress** e **Done**, com uma interface para a movimentação de cards de tarefa entre esses estados.
 
-O principal desafio foi a integração com o SQL Server, onde foram enfrentados problemas relacionados ao uso de aliases nas consultas SQL. Durante o processo de integração, surgiram dificuldades ao configurar a conexão e ao adaptar a estrutura de código para funcionar adequadamente com o banco de dados SQL Server. A solução envolveu a reconfiguração das dependências no projeto para garantir a compatibilidade com o SQL Server, incluindo a configuração do driver JDBC apropriado.
-
-Além disso, houve a necessidade de alterações nas consultas SQL, pois o SQL Server não interpretava corretamente os aliases usados nas consultas. Essas mudanças levaram à reescrita de várias classes responsáveis por realizar inserções no banco de dados, como as classes DAO (Data Access Object), para garantir que os dados fossem inseridos corretamente nas tabelas. 
+O principal desafio foi a integração com o SQL Server, onde foram enfrentados problemas relacionados ao uso de aliases nas consultas SQL. Durante o processo de integração, surgiram dificuldades ao configurar a conexão e ao adaptar a estrutura de código para funcionar adequadamente com o banco de dados SQL Server. A solução envolveu a reconfiguração das dependências no projeto para garantir a compatibilidade com o SQL Server, incluindo a configuração do driver JDBC apropriado. Essas mudanças levaram à reescrita de várias classes responsáveis por realizar inserções no banco de dados, como as classes DAO (Data Access Object), para garantir que os dados fossem inseridos corretamente nas tabelas. 
 
 ## ⛏️ Tecnologias utilizadas (Pré-requisitos):
 
@@ -32,7 +30,7 @@ O projeto é organizado em várias camadas, seguindo o modelo de arquitetura tra
 - **exception**: Contém exceções personalizadas para tratamento de erros.
 - **persistence**: Camada de persistência, que inclui o acesso ao banco de dados.
 - **service**: Camada de serviço com a lógica de negócios.
-- **ui**: Interface de usuário, caso haja implementação de front-end ou interação com o usuário.
+- **ui**: Interface de usuário.
 
 ### Funcionalidades Implementadas:
 
