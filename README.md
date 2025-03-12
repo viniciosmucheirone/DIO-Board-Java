@@ -1,4 +1,4 @@
-# Criando seu Board de Tarefas com Java
+# Criando um Board de Tarefas com Java
 
 <h1 align="center">
     <img alt="Gobarber" src="img\board.jpg" width="300px" />
@@ -6,7 +6,7 @@
 
 ## Descrição do Projeto
 
-Este projeto foi desenvolvido como parte do **programa Decola Tech** e tem como objetivo ensinar como criar um **board de tarefas** simples utilizando **Java**. O projeto passa por todas as etapas de desenvolvimento, desde o planejamento e estruturação até a implementação de funcionalidades como **gerenciamento de dados**, **integração entre camadas** e **manipulação de dados**, seguindo as melhores práticas de programação.
+Neste projeto, desenvolvi uma aplicação de gerenciamento de tarefas utilizando Java, com foco nas melhores práticas de desenvolvimento. O objetivo foi criar um board de tarefas funcional, passando por todas as etapas do processo, desde o planejamento e estruturação até a implementação de funcionalidades como gerenciamento de dados e integração entre camadas. A aplicação foi desenvolvida seguindo as melhores práticas de programação e boas práticas de design de software.
 
 A aplicação permite gerenciar tarefas em diferentes estágios, como **To Do**, **In Progress** e **Done**, com uma interface para a movimentação de cards de tarefa entre esses estados.
 
