@@ -1,0 +1,195 @@
+mar. 11, 2025 11:30:05 PM liquibase.database
+INFO: Set default schema name to dbo
+mar. 11, 2025 11:30:05 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202408191938.sql
+mar. 11, 2025 11:30:05 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202408210954.sql
+mar. 11, 2025 11:30:05 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202408211004.sql
+mar. 11, 2025 11:30:05 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202408211005.sql
+mar. 11, 2025 11:30:05 PM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202408281807.sql
+mar. 11, 2025 11:30:06 PM liquibase.changelog
+INFO: Reading from DATABASECHANGELOG
+mar. 11, 2025 11:30:06 PM liquibase.lockservice
+INFO: Successfully acquired change log lock
+mar. 11, 2025 11:30:06 PM liquibase.command
+INFO: Using deploymentId: 1746606317
+mar. 11, 2025 11:30:06 PM liquibase.changelog
+INFO: Reading from DATABASECHANGELOG
+Running Changeset: db/changelog/migrations/db.changelog-202408191938.sql::202408191938::junior
+mar. 11, 2025 11:30:06 PM liquibase.changelog
+SEVERE: ChangeSet db/changelog/migrations/db.changelog-202408191938.sql::202408191938::junior encountered an exception.
+liquibase.exception.DatabaseException: Já existe um objeto com nome 'BOARDS' no banco de dados. [Failed SQL: (2714) CREATE TABLE BOARDS (
+        id BIGINT PRIMARY KEY,  
+        name VARCHAR(255) NOT NULL
+);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
+	at liquibase.database.core.MSSQLDatabase.executeStatements(MSSQLDatabase.java:123)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:775)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:113)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:111)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:220)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1290)
+	at liquibase.Liquibase.update(Liquibase.java:205)
+	at liquibase.Liquibase.update(Liquibase.java:188)
+	at liquibase.Liquibase.update(Liquibase.java:175)
+	at liquibase.Liquibase.update(Liquibase.java:155)
+	at br.com.dio.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:36)
+	at br.com.dio.Main.main(Main.java:15)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Já existe um objeto com nome 'BOARDS' no banco de dados.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1676)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:907)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:802)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7785)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3793)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:268)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:242)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:775)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 41 more
+
+
+UPDATE SUMMARY
+Run:                          0
+Previously run:               0
+Filtered out:                 0
+-------------------------------
+Total change sets:            5
+
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: UPDATE SUMMARY
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: Run:                          0
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: Previously run:               0
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: Filtered out:                 0
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: -------------------------------
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: Total change sets:            5
+mar. 11, 2025 11:30:06 PM liquibase.util
+INFO: Update summary generated
+mar. 11, 2025 11:30:06 PM liquibase.command
+INFO: Update command encountered an exception.
+mar. 11, 2025 11:30:06 PM liquibase.lockservice
+INFO: Successfully released change log lock
+mar. 11, 2025 11:30:06 PM liquibase.command
+INFO: Logging exception.
+ERROR: Exception Details
+ERROR: Exception Primary Class:  SQLServerException
+ERROR: Exception Primary Reason:  Já existe um objeto com nome 'BOARDS' no banco de dados.
+ERROR: Exception Primary Source:  Microsoft SQL Server 16.00.1000
+mar. 11, 2025 11:30:06 PM liquibase.command
+INFO: Command execution complete
+liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202408191938.sql::202408191938::junior:
+     Reason: liquibase.exception.DatabaseException: Já existe um objeto com nome 'BOARDS' no banco de dados. [Failed SQL: (2714) CREATE TABLE BOARDS (
+        id BIGINT PRIMARY KEY,  
+        name VARCHAR(255) NOT NULL
+);]
+	at liquibase.command.CommandScope.execute(CommandScope.java:258)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1290)
+	at liquibase.Liquibase.update(Liquibase.java:205)
+	at liquibase.Liquibase.update(Liquibase.java:188)
+	at liquibase.Liquibase.update(Liquibase.java:175)
+	at liquibase.Liquibase.update(Liquibase.java:155)
+	at br.com.dio.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:36)
+	at br.com.dio.Main.main(Main.java:15)
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202408191938.sql::202408191938::junior:
+     Reason: liquibase.exception.DatabaseException: Já existe um objeto com nome 'BOARDS' no banco de dados. [Failed SQL: (2714) CREATE TABLE BOARDS (
+        id BIGINT PRIMARY KEY,  
+        name VARCHAR(255) NOT NULL
+);]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:148)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:113)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:111)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:220)
+	... 12 more
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202408191938.sql::202408191938::junior:
+     Reason: liquibase.exception.DatabaseException: Já existe um objeto com nome 'BOARDS' no banco de dados. [Failed SQL: (2714) CREATE TABLE BOARDS (
+        id BIGINT PRIMARY KEY,  
+        name VARCHAR(255) NOT NULL
+);]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:819)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	... 20 more
+Caused by: liquibase.exception.DatabaseException: Já existe um objeto com nome 'BOARDS' no banco de dados. [Failed SQL: (2714) CREATE TABLE BOARDS (
+        id BIGINT PRIMARY KEY,  
+        name VARCHAR(255) NOT NULL
+);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
+	at liquibase.database.core.MSSQLDatabase.executeStatements(MSSQLDatabase.java:123)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:775)
+	... 35 more
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Já existe um objeto com nome 'BOARDS' no banco de dados.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1676)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:907)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:802)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7785)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3793)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:268)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:242)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:775)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 41 more
