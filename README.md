@@ -94,7 +94,7 @@ Aqui estão algumas capturas de tela que ilustram o funcionamento do board de ta
     <img alt="Gobarber" src="img\board_db.png"/>
 </h1>
 
-####  Tela 2: Visualização no banco de dados e visualização no banco de dados
+####  Tela 2: Cadastro de um card e visualização no banco de dados
 <h1 align="center">
     <img alt="Gobarber" src="img\board_cadastro_card.png"/>
 </h1>
