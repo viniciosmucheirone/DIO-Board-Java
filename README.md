@@ -43,7 +43,7 @@ O projeto é organizado em várias camadas, seguindo o modelo de arquitetura tra
 O Figma foi utilizado para a abstração do domínio desta API, sendo essencial na análise e projeto da solução. A ferramenta ajudou a mapear as entidades e a estrutura de dados, garantindo uma visão clara da arquitetura e das interações entre os componentes da aplicação.
 
 ### Diagrama de Classes (Domínio da API)
-A seguir, você encontrará o Diagrama de Classes, que ilustra a estrutura do domínio da API, as entidades envolvidas e os relacionamentos entre elas.
+A seguir, você encontrará o Diagrama de Classes, que ilustra a estrutura do domínio do board, as entidades envolvidas e os relacionamentos entre elas.
 
 ```mermaid
 classDiagram
